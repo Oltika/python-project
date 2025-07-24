@@ -2,7 +2,7 @@ from pages.homepage import HomePage
 from pages.loginpage import LoginPage
 from conftest import browser
 
-def test_open_s6(browser):
+def test_open_genAI_site(browser):
     home_page = HomePage(browser)
     home_page.open()
     home_page.clickOnStartBtn()
