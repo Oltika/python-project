@@ -1,5 +1,7 @@
-from selenium import webdriver
+
 from selenium.webdriver.common.by import By
+from conftest import browser
+
 
 class LoginPage:
 
@@ -7,5 +9,6 @@ class LoginPage:
         self.browser = browser
 
     def isTitleDisplayed(self, title):
-        page_title = self.browser.find_element(By.ID, "headingText")
-        assert page_title.text == title
+        self.browser.implicitly_wait(5)
+        sign_in_title = self.browser.find_element(By.ID, "headingText")
+        assert sign_in_title.text == title

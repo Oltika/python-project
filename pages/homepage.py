@@ -1,4 +1,5 @@
-from selenium import webdriver
+
+from conftest import browser
 from selenium.webdriver.common.by import By
 
 class HomePage:
@@ -10,5 +11,5 @@ class HomePage:
         self.browser.get("https://cloud.google.com/ai/generative-ai?hl=en")
 
     def clickOnStartBtn(self):
-        startBtn = self.browser.find_element(By.CSS_SELECTOR, "[aria-label='Get started for free']")
-        startBtn.click()
+        start_btn = self.browser.find_element(By.CSS_SELECTOR, "[aria-label='Get started for free']")
+        start_btn.click()
